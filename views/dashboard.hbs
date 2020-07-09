@@ -1,0 +1,37 @@
+<h1>Welcome {{name}}</h1>
+<p>Daftar Hama yang anda laporkan</p>
+
+{{#if hama}}
+    <table>
+        <thead>
+            <tr>
+                <th>Hama</th>
+                <th>Tanaman</th>
+                <th>Gambar</th>
+                <th>Obat</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each hama}}
+                <tr>
+                    <td>{{hama}}</td>
+                    <td>{{tanaman}}</td>
+                    <td><img class="img-small" src="{{gambar}}" alt=""></td>
+                    <td>{{obat}}</td>
+                    <td>
+                        <a href="/hama/edit/{{_id}}" class="btn btn-float">Edit</a> 
+                        <form action="/hama/{{_id}}" method="POST" id="delete-form">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit"  class="btn red">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{else}}
+<p>Belum Ada Hama</p>
+{{/if}}

@@ -1,0 +1,36 @@
+<h3>Add Story</h3>
+<div class="row">
+    <form action="/hama" method="POST" class="col s12" enctype="multipart/form-data">
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="hama" name="hama">
+                <label for="hama">Hama</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="tanaman" name="tanaman">
+                <label for="tanman">Tanaman</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <input type="file" multiple="multiple" name="gambar">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="obat" name="obat">
+                <label for="obat">Obat</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <input type="submit" value="Save" class="btn">
+            <a href="/dashboard" class="btn orange">Cancel</a>
+        </div>
+    </form>
+</div>

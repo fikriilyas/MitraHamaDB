@@ -1,0 +1,32 @@
+<h3>Edit Laporan Hama</h3>
+<div class="row">
+    <form action="/hama/{{hama._id}}" method="POST" class="col s12">
+        <input type="hidden" name="_method" value="PUT">
+        <input type="hidden" name="gambar" value="{{hama.gambar}}">
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="hama" name="hama" value="{{hama.hama}}">
+                <label for="hama">Hama</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="tanaman" name="tanaman" value="{{hama.tanaman}}">
+                <label for="tanman">Tanaman</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="obat" name="obat" value="{{hama.obat}}">
+                <label for="obat">Obat</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <input type="submit" value="Save" class="btn">
+            <a href="/dashboard" class="btn orange">Edit</a>
+        </div>
+    </form>
+</div>

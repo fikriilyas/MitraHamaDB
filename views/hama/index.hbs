@@ -1,0 +1,46 @@
+<h1>Database Hama Publik</h1>
+<div class="row">
+    {{#each hama}}
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-image">
+                    {{!-- {{{editIcon user ../user _id}}} --}}
+                </div>
+                <div class="card-content center-align">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th> Hama </th>
+                                <th> {{hama}} </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> Tanaman </td>
+                                <td>{{tanaman}}</td>
+                            </tr>
+                            <tr>
+                                <td> Gambar </td>
+                                <td><img class="img-small" src="{{gambar}}" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td> Obat </td>
+                                <td>{{obat}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <div class="chip">
+                        <img src="{{user.image}}" alt="">
+                        <a href="/stories/user/{{user._id}}">{{user.displayName}}</a>
+                    </div>
+                </div>
+                <div class="card-action center-align">
+                    <a href="/hama/{{_id}}" class="btn-grey">Read More</a>
+                </div>
+            </div>
+        </div>
+    {{else}}
+
+    {{/each}}
+</div>
