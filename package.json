@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=development nodemon index",
-    "start": "NODE_ENV=production node app"
+    "start": "NODE_ENV=production node index"
   },
   "author": "Fikri Ilyas Muharram",
   "license": "MIT",
