@@ -1,0 +1,25 @@
+<h2>Daftar Pengguna </h2>
+<table>
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Status</th>
+            <th>Ubah</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each user}}
+            <tr>
+                <td>{{displayName}}</td>
+                <td>{{status}}</td>
+                <td><form action="/user/{{_id}}" method="POST" id="edit-form">
+                        <input type="hidden" name="_method" value="PUT">
+                        <button type="submit"  class="btn orange">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>

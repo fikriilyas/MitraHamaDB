@@ -12,5 +12,12 @@ module.exports = {
         } else {
             return next()
         }
+    },
+    ensureAdmin: function(req, res, next){
+        if (req.isAuthenticated() && req.user.status === 'admin'){
+            return next()
+        } else {
+            res.redirect('/')
+        }
     }
 }
