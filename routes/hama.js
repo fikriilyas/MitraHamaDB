@@ -115,7 +115,7 @@ router.put('/:id', ensureAuth, async(req,res) => {
         if (hama.user != req.user.id) {
             res.redirect('/hama')
         } else {
-            story = await Hama.findOneAndUpdate({_id: req.params.id}, req.body, {
+            hama = await Hama.findOneAndUpdate({_id: req.params.id}, req.body, {
                 new: true,
                 runValidators: true
             })

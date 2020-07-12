@@ -50,6 +50,7 @@ app.use(session({
     store: new MongoStore({ mongooseConnection: mongoose.connection})
 }))
 
+//Method Override
 app.use(
     methodOverride(function (req, res) {
       if (req.body && typeof req.body === 'object' && '_method' in req.body) {
