@@ -1,9 +1,9 @@
 module.exports = {
     ensureAuth: function(req, res, next){
-        if (req.isAuthenticated()){
+        if (req.isAuthenticated() && (req.user.status === 'accepted' || req.user.status === 'admin')){
             return next()
         } else {
-            res.redirect('/')
+            res.render('error/new')
         }
     },
     ensureGuest: function(req,res, next){
@@ -17,7 +17,7 @@ module.exports = {
         if (req.isAuthenticated() && req.user.status === 'admin'){
             return next()
         } else {
-            res.redirect('/')
+            res.render('error/401')
         }
     }
 }

@@ -28,7 +28,7 @@ const UserSchema = new mongoose.Schema({
     status: {
         type: String,
         default: 'new',
-        enum: ['new', 'accepted']
+        enum: ['new', 'accepted','admin']
     }
 })
 
